@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proffy | Sua plataforma de estudos online</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/study-page.css">
+    <link rel="shortcut icon" type="image-x/png" href="img/favicon.png">
+    <!--Fonts-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap"
+        rel="stylesheet">
+    <!--seo-->
+    <meta name="description" content="Professional Education Plataform">
+    <meta name="keywords" content="Education, Study, EAD, Tutor, Teacher">
+    <meta name="author" content="Lucas Montalvani">
+</head>
+
+<body id="study-page">
+    <div class="container">
+        <header class="header-container">
+            <div class="top-bar-container">
+                <a href="index.html">
+                    <img src="img/icons/back.svg" alt="Voltar">
+                </a>
+
+                <img src="img/logo.svg" alt="Proffy">
+            </div>
+            <!--top bar container-->
+
+            <div class="header-content">
+                <strong>Esses são os proffys disponíveis.</strong>
+
+                <form id="search-teachers">
+                    <div class="select-block">
+                        <label for="subject">Matéria</label>
+                        <select name="subject" id="subject">
+                            <option value="" disabled="" hidden="">Selecione uma opção</option>
+                            <option value="1">Artes</option>
+                            <option value="2">Biologia</option>
+                            <option value="3">Ciências</option>
+                            <option value="4">Educação física</option>
+                            <option value="5">Geografia</option>
+                            <option value="6">História</option>
+                            <option value="7">Matemática</option>
+                            <option value="8">Português</option>
+                            <option value="9">Química</option>
+                            <option value="10">Física</option>
+                        </select>
+                    </div>
+                    <!--select block-->
+
+                    <div class="select-block">
+                        <label for="weekday">Dia da semana</label>
+                        <select name="weekday" id="weekday">
+                            <option value="" disabled="" hidden="">Selecione uma opção</option>
+                            <option value="0">Domingo</option>
+                            <option value="1">Segunda-feira</option>
+                            <option value="2">Terça-feira</option>
+                            <option value="3">Quarta-feira</option>
+                            <option value="4">Quinta-feira</option>
+                            <option value="5">Sexta-feira</option>
+                            <option value="6">Sábado</option>
+                        </select>
+                    </div>
+                    <!--select block-->
+
+                    <div class="input-block">
+                        <label for="time">Hora</label>
+                        <input type="number" name="time" id="time" min="0" max="24">
+                    </div>
+                    <!--select block-->
+
+                    <button type="submit">Filtrar</button>
+                </form>
+            </div>
+            <!--header content-->
+
+        </header>
+
+        <main>
+            <article class="teacher-item">
+                <header>
+                    <img src="https://avatars2.githubusercontent.com/u/2254731?s=460&amp;u=0ba16a79456c2f250e7579cb388fa18c5c2d7d65&amp;v=4"
+                        alt="Diego Fernandes">
+                    <div>
+                        <strong>Diego Fernandes</strong>
+                        <span>Química</span>
+                    </div>
+                </header>
+
+                <p>Entusiasta das melhores tecnologias de química avançada.<br><br>Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. Mais de 200.000 pessoas já passaram por uma das minhas explosões.</p>
+
+                <footer>
+                    <p>Preço/hora<strong>R$ 20,00</strong></p>
+                    <button>
+                        <img src="img/icons/whatsapp.svg" alt="Whatsapp">Entrar em contato
+                    </button>
+                </footer>
+            </article><!--Professor 1-->
+
+            <article class="teacher-item">
+                <header>
+                    <img src="https://avatars2.githubusercontent.com/u/6643122?s=460&u=1e9e1f04b76fb5374e6a041f5e41dce83f3b5d92&v=4"
+                        alt="Mayk Brito">
+                    <div>
+                        <strong>Mayk Brito</strong>
+                        <span>Educação Física</span>
+                    </div>
+                </header>
+
+                <p>Instrutor de Educação Física para iniciantes, minha missão de vida é levar saúde e contribuir para o crescimento de quem se interessar.<br><br>Comecei a minha jornada profissional em 2001, quando meu pai me deu dois alteres de 32kg com a seguinte condição: "Aprenda a fazer dinheiro com isso!"</p>
+
+                <footer>
+                    <p>Preço/hora<strong>R$ 40,00</strong></p>
+                    <button>
+                        <img src="img/icons/whatsapp.svg" alt="Whatsapp">Entrar em contato
+                    </button>
+                </footer>
+            </article><!--professor 2-->
+
+            <article class="teacher-item">
+                <header>
+                    <img src="https://avatars1.githubusercontent.com/u/62609007?s=460&u=f26200c0b90b7e6a26eb50e5361f9098b1562e83&v=4"
+                        alt="Lucas Montalvani">
+                    <div>
+                        <strong>Lucas Montalvani</strong>
+                        <span>Artes</span>
+                    </div>
+                </header>
+
+                <p>A minha arte é apenas o rascunho da minha própria vida.<br><br>Ensinar as pessoas a representarem, seu próprio interior, é a minha meta. Gerando diariamente conteúdo a milhares de seguidores, planejo mudar a visão da arte no Brasil.</p>
+
+                <footer>
+                    <p>Preço/hora<strong>R$ 100,00</strong></p>
+                    <button>
+                        <img src="img/icons/whatsapp.svg" alt="Whatsapp">Entrar em contato
+                    </button>
+                </footer>
+            </article><!--professor 3-->
+        </main>
+
+    </div>
+    <!--container-->
+
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
