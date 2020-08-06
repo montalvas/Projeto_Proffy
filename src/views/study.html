@@ -24,7 +24,7 @@
     <div class="container">
         <header class="header-container">
             <div class="top-bar-container">
-                <a href="index.html">
+                <a href="/">
                     <img src="/img/icons/back.svg" alt="Voltar">
                 </a>
 
@@ -39,16 +39,11 @@
                         <label for="subject">Matéria</label>
                         <select name="subject" id="subject">
                             <option value="" disabled="" hidden="">Selecione uma opção</option>
-                            <option value="1">Artes</option>
-                            <option value="2">Biologia</option>
-                            <option value="3">Ciências</option>
-                            <option value="4">Educação física</option>
-                            <option value="5">Geografia</option>
-                            <option value="6">História</option>
-                            <option value="7">Matemática</option>
-                            <option value="8">Português</option>
-                            <option value="9">Química</option>
-                            <option value="10">Física</option>
+
+                            {%for subject in subjects %}
+                                <option value="{{loop.index}}" {{ "selected" if filters.subject == loop.index }}>{{subject}}</option>
+                            {%endfor%}
+
                         </select>
                     </div><!--select block-->
                     
@@ -68,7 +63,7 @@
                     
                     <div class="input-block">
                         <label for="time">Hora</label>
-                        <input type="number" name="time" id="time" min="0" max="24">
+                        <input type="number" name="time" id="time" value={{filters.time}}>
                     </div><!--select block-->
                     
                     <button type="submit">Filtrar</button>
@@ -78,65 +73,29 @@
         </header>
 
         <main>
-            <article class="teacher-item">
-                <header>
-                    <img src="https://avatars2.githubusercontent.com/u/2254731?s=460&amp;u=0ba16a79456c2f250e7579cb388fa18c5c2d7d65&amp;v=4"
-                        alt="Diego Fernandes">
-                    <div>
-                        <strong>Diego Fernandes</strong>
-                        <span>Química</span>
-                    </div>
-                </header>
 
-                <p>Entusiasta das melhores tecnologias de química avançada.<br><br>Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. Mais de 200.000 pessoas já passaram por uma das minhas explosões.</p>
+            {%for proffy in proffys %}
+                <article class="teacher-item">
+                    <header>
+                        <img src="{{proffy.avatar}}"
+                            alt="{{proffy.name}}">
+                        <div>
+                            <strong>{{proffy.name}}</strong>
+                            <span>{{proffy.subject}}</span>
+                        </div>
+                    </header>
 
-                <footer>
-                    <p>Preço/hora<strong>R$ 20,00</strong></p>
-                    <button>
-                        <img src="img/icons/whatsapp.svg" alt="Whatsapp">Entrar em contato
-                    </button>
-                </footer>
-            </article><!--Professor 1-->
+                    <p>{{proffy.bio}}</p>
 
-            <article class="teacher-item">
-                <header>
-                    <img src="https://avatars2.githubusercontent.com/u/6643122?s=460&u=1e9e1f04b76fb5374e6a041f5e41dce83f3b5d92&v=4"
-                        alt="Mayk Brito">
-                    <div>
-                        <strong>Mayk Brito</strong>
-                        <span>Educação Física</span>
-                    </div>
-                </header>
-
-                <p>Instrutor de Educação Física para iniciantes, minha missão de vida é levar saúde e contribuir para o crescimento de quem se interessar.<br><br>Comecei a minha jornada profissional em 2001, quando meu pai me deu dois alteres de 32kg com a seguinte condição: "Aprenda a fazer dinheiro com isso!"</p>
-
-                <footer>
-                    <p>Preço/hora<strong>R$ 40,00</strong></p>
-                    <button>
-                        <img src="img/icons/whatsapp.svg" alt="Whatsapp">Entrar em contato
-                    </button>
-                </footer>
-            </article><!--professor 2-->
-
-            <article class="teacher-item">
-                <header>
-                    <img src="https://avatars1.githubusercontent.com/u/62609007?s=460&u=f26200c0b90b7e6a26eb50e5361f9098b1562e83&v=4"
-                        alt="Lucas Montalvani">
-                    <div>
-                        <strong>Lucas Montalvani</strong>
-                        <span>Artes</span>
-                    </div>
-                </header>
-
-                <p>A minha arte é apenas o rascunho da minha própria vida.<br><br>A melhor maneira de nos prepararmos para o futuro é concentrar toda a imaginação e entusiasmo na execução perfeita do trabalho de hoje.</p>
-
-                <footer>
-                    <p>Preço/hora<strong>R$ 100,00</strong></p>
-                    <button>
-                        <img src="/img/icons/whatsapp.svg" alt="Whatsapp">Entrar em contato
-                    </button>
-                </footer>
-            </article><!--professor 3-->
+                    <footer>
+                        <p>Preço/hora<strong>R$ {{proffy.cost}}</strong></p>
+                        <a href="https://api.whatsapp.com/send?1=pt_BR&phone==55{{proffy.whatsapp}}&text=Tenho interesse na sua aula de {{proffy.subject}} {{proffy.name}}" class="button" target="_blank">
+                            <img src="/img/icons/whatsapp.svg" alt="Whatsapp">Entrar em contato
+                        </a>
+                    </footer>
+                </article><!--Professor 1-->
+            {%endfor%}
+           
         </main>
     </div><!--container-->
 </body>
