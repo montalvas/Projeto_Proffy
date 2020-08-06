@@ -1,0 +1,26 @@
+{
+  "name": "Projeto_proffy",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido na Next Level Week da Rocketseat",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/montalvas/Projeto_Proffy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/montalvas/Projeto_Proffy/issues"
+  },
+  "homepage": "https://github.com/montalvas/Projeto_Proffy#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
