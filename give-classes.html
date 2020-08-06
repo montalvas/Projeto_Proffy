@@ -18,6 +18,8 @@
     <meta name="description" content="Professional Education Plataform">
     <meta name="keywords" content="Education, Study, EAD, Tutor, Teacher">
     <meta name="author" content="Lucas Montalvani">
+    <!--Script-->
+    <script src="js/addField.js" defer></script>
 </head>
 
 <body id="classes-page">
@@ -67,7 +69,7 @@
                     <div class="select-block">
                         <label for="subject">Matéria</label>
                         <select name="subject" id="subject" required>
-                            <option value="" disabled="" hidden="">Selecione uma opção</option>
+                            <option value="">Selecione uma opção</option>
                             <option value="1">Artes</option>
                             <option value="2">Biologia</option>
                             <option value="3">Ciências</option>
@@ -91,14 +93,14 @@
 
                 <fieldset id="schedule-item">
                     <legend>Horários disponíveis
-                        <button id="add-time">+ Novo horário</button>
+                        <button type="button" id="add-time">+ Novo horário</button>
                     </legend>
 
                     <div class="schedule-item">
                         <div class="select-block">
                             <label for="weekday">Dia da semana</label>
                             <select name="weekday[]" required>
-                                <option value="" disabled="" hidden="">Selecione uma opção</option>
+                                <option value="">Selecione uma opção</option>
                                 <option value="0">Domingo</option>
                                 <option value="1">Segunda-feira</option>
                                 <option value="2">Terça-feira</option>
@@ -120,31 +122,6 @@
                         </div><!--input block-->
                     </div><!--schedule item-->
 
-                    <div class="schedule-item">
-                        <div class="select-block">
-                            <label for="weekday">Dia da semana</label>
-                            <select name="weekday[]" required>
-                                <option value="" disabled="" hidden="">Selecione uma opção</option>
-                                <option value="0">Domingo</option>
-                                <option value="1">Segunda-feira</option>
-                                <option value="2">Terça-feira</option>
-                                <option value="3">Quarta-feira</option>
-                                <option value="4">Quinta-feira</option>
-                                <option value="5">Sexta-feira</option>
-                                <option value="6">Sábado</option>
-                            </select>
-                        </div><!--select block-->
-
-                        <div class="input-block">
-                            <label for="time_from">Das</label>
-                            <input type="time" name="time_from[]" required>
-                        </div><!--input block-->
-
-                        <div class="input-block">
-                            <label for="time_to">Até</label>
-                            <input type="time" name="time_to[]" required>
-                        </div><!--input block-->
-                    </div><!--schedule item-->
                 </fieldset>
             </form>
 
@@ -157,10 +134,6 @@
             </footer>
         </main>
     </div><!--container-->
-    
-
-
-    <script src="js/script.js"></script>
 </body>
 
 </html>
