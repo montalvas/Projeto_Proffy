@@ -129,6 +129,12 @@
     background: var(--color-secondary-dark);
 }
 
+#study-page main .no-results {
+    max-width: 30rem;
+    margin: 12rem auto;
+    text-align: center;
+}
+
 /* RESPONSIVIDADE */
 
 @media (min-width: 700px){
